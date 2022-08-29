@@ -5,18 +5,21 @@ export default function TextForm(props) {
         let newText = text.toUpperCase();
 
         setText(newText);
+        props.showAlert("Converted to uppercase!","success");
     }
     const handleLoClick = () => {
 
         let newText = text.toLowerCase();
 
         setText(newText);
+        props.showAlert("Converted to Lowercase!","success");
     }
     const clearscreen = () => {
 
         let newText = '';
 
         setText(newText);
+        props.showAlert("Screen cleared!","success");
     }
     const handleOnChange = (event) => {
 
@@ -25,6 +28,7 @@ export default function TextForm(props) {
     const handleExtraSpaces= ()=>{
         let newText =  text.split(/[ ]+/);
         setText(newText.join(" "))
+        props.showAlert("Extra spaces has been removed!","success")
     }
     const [text, setText] = useState('Enter the text');
     return (
@@ -32,7 +36,7 @@ export default function TextForm(props) {
             <div className="container" style={{color: props.mode === 'dark'?'white':'#042743'}}>
                 <h1>{props.heading }</h1>
                 <div className="mb-3">
-                    <textarea className="form-control" value={text} onChange={handleOnChange} style={{backgroundColor: props.mode === 'dark'?'black':'white', color: props.mode === 'dark'?'white':'#042743'}} id="myBox" rows="8"></textarea>
+                    <textarea className="form-control" value={text} onChange={handleOnChange} style={{backgroundColor: props.mode === 'dark'?'black':'white', color: props.mode === 'dark'?'green':'#042743'}} id="myBox" rows="8"></textarea>
                 </div>
                 <button className="btn btn-primary mx-1" onClick={handleUpClick}>Convert to uppercase</button>
                 <button className="btn btn-primary mx-1" onClick={handleLoClick}>Convert to toLowerCase</button>
