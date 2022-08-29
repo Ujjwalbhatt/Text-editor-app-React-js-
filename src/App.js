@@ -8,7 +8,7 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link
+  // Link
 } from "react-router-dom";
 
 
@@ -46,7 +46,7 @@ function App() {
       document.title = 'Textutils- light mode'
     }
   }
-  const [words, setWords] = useState([])
+  
   return ( 
     <>
       {/* <Navbar title="TextUtils" aboutText="About TextUtils" /> */}
