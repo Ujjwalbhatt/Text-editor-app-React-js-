@@ -47,7 +47,7 @@ function App() {
     }
   }
   const [words, setWords] = useState([])
-  return (
+  return ( 
     <>
       {/* <Navbar title="TextUtils" aboutText="About TextUtils" /> */}
       {/* <Navbar/> */}
