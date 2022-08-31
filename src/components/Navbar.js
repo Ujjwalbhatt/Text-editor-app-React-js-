@@ -1,8 +1,26 @@
-import React from 'react'
+// import React from 'react'
 import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom';
-
+import React, { useState } from 'react'
 export default function Navbar(props) {
+    const[myStyle, setMystyle]= useState(
+    )
+        const onClik = ()=>{
+            if(myStyle === true){
+                setMystyle({
+                    color: 'red',
+                    backgroundColor: 'white'
+                })
+            }
+            else{
+                setMystyle({
+                    color: 'white',
+                    backgroundColor: 'black',
+                    border: '1px solid white'
+                })
+            }
+        }
+
     return (
         <nav className={`navbar navbar-expand-lg navbar-${props.mode} bg-${props.mode}`}>
             <div className="container-fluid">
@@ -13,7 +31,7 @@ export default function Navbar(props) {
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                         <li className="nav-item">
-                            <Link a className="nav-link active" ar ia-current="page" to="/">Home</Link>
+                            <Link className="nav-link active" onClick={onClik} style={props.myStyle} aria-current="page" to="/">Home</Link>
                         </li>
                         <li className="nav-item">
                             <Link className="nav-link" to="/About">{props.aboutText}</Link>

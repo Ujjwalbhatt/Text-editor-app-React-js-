@@ -8,7 +8,6 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  // Link
 } from "react-router-dom";
 
 
@@ -16,7 +15,6 @@ import {
 function App() {
   const [mode, setMode] = useState('light'); // Whether dark mode is enabled or not
   const [alert, setAlert] = useState(null)
-
   const showAlert = (message, type) => {
     setAlert({
       msg: message,
