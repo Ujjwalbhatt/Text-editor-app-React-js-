@@ -7,9 +7,11 @@ export default function Navbar(props) {
     )
         const onClik = ()=>{
             if(myStyle === true){
+
                 setMystyle({
-                    color: 'red',
-                    backgroundColor: 'white'
+                    color: 'black',
+                    backgroundColor: 'white',
+                
                 })
             }
             else{
@@ -17,6 +19,7 @@ export default function Navbar(props) {
                     color: 'white',
                     backgroundColor: 'black',
                     border: '1px solid white'
+
                 })
             }
         }
@@ -31,10 +34,10 @@ export default function Navbar(props) {
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                         <li className="nav-item">
-                            <Link className="nav-link active" onClick={onClik} style={props.myStyle} aria-current="page" to="/">Home</Link>
+                            <Link className="nav-link" onClick={onClik} style={props.myStyle} aria-current="page" to="/">Home</Link>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link" to="/About">{props.aboutText}</Link>
+                            <Link className="nav-link" to="/About" >{props.aboutText}</Link>
                         </li>
                     </ul>
                     {/* <form className="d-flex">
